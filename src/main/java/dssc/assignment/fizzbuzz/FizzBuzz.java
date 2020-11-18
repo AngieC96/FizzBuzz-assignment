@@ -49,6 +49,9 @@ public class FizzBuzz {
     public String convert(int number) {
         //return null;
         //return "1";
+        if (number == 3) {
+            return "Fizz";
+        }
         return Integer.toString(number);
     }
 }
