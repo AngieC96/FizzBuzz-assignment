@@ -49,17 +49,10 @@ public class FizzBuzz {
     public String convert(int number) {
         //return null;
         //return "1";
-
-        if (number % 15 == 0) {
-            return "FizzBuzz";
-        }
-        if (number % 3 == 0){
-            return "Fizz";
-        }
-        if (number % 5 == 0) {
-            return "Buzz";
+        if (number == 1) {
+            return "1";
         } else {
-            return "" + number;
+            return "2";
         }
     }
 }
