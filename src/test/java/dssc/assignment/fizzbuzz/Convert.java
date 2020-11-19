@@ -8,6 +8,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Convert {
 
+    private final FizzBuzz fizzBuzz = new FizzBuzz();  // instance of fizzBuzz as a field for our class
+    // We can do this because JUnit creates a new instance of each test class before executing each test method
+    // Each test will have its own instance of fizzBuzz to run
+
 //    @Test
 //    void number_1() {
 //        FizzBuzz fizzBuzz = new FizzBuzz();
@@ -32,7 +36,7 @@ public class Convert {
     // We can provide the pair (expected, number) that will be used by  Junit to run this test multiple times
     // This test counts as three tests!!!!
     void numbers_not_divisible_by_3_or_5_to_strings(int number, String expected) {
-        FizzBuzz fizzBuzz = new FizzBuzz();
+        //FizzBuzz fizzBuzz = new FizzBuzz();  // Ctrl + Alt + f: Extract/Introduce → Introduce Field, Ctrl + Alt + O: Optimize Imports
         assertEquals(expected, fizzBuzz.convert(number));
     }
 
@@ -58,15 +62,22 @@ public class Convert {
     @ValueSource(ints = {3, 6, 24})
     // Since we need to provide only one argument to our test
     void multiples_of_3_to_Fizz(int number) {
-        FizzBuzz fizzBuzz = new FizzBuzz();
+        //FizzBuzz fizzBuzz = new FizzBuzz();
         assertEquals("Fizz", fizzBuzz.convert(number));
     }
 
     @ParameterizedTest
     @ValueSource(ints = {5, 10, 100})
     void multiples_of_5_to_Buzz(int number) {
-        FizzBuzz fizzBuzz = new FizzBuzz();
+        //FizzBuzz fizzBuzz = new FizzBuzz();
         assertEquals("Buzz", fizzBuzz.convert(number));
+    }
+
+    @ParameterizedTest
+    @ValueSource(ints = {15, 45, 75})
+    void multiples_of_3_and_5_to_FizzBuzz(int number) {
+        //FizzBuzz fizzBuzz = new FizzBuzz();
+        assertEquals("FizzBuzz", fizzBuzz.convert(number));
     }
 }
 
