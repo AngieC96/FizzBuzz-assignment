@@ -61,5 +61,12 @@ public class Convert {
         FizzBuzz fizzBuzz = new FizzBuzz();
         assertEquals("Fizz", fizzBuzz.convert(number));
     }
+
+    @ParameterizedTest
+    @ValueSource(ints = {5, 10, 100})
+    void multiples_of_5_to_Buzz(int number) {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        assertEquals("Buzz", fizzBuzz.convert(number));
+    }
 }
 
