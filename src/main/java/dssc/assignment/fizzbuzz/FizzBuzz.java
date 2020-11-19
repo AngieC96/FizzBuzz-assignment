@@ -1,6 +1,10 @@
 package dssc.assignment.fizzbuzz;
 
 
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+
 /**
  * FizzBuzz assignment
  * We want to write a Java program that prints the numbers from 1 to 100 to the
@@ -58,5 +62,10 @@ public class FizzBuzz {
         } else {
             return Integer.toString(number);
         }
+    }
+
+    public void print() {
+        Stream<String> fizzBuzzes = IntStream.range(1, 101).mapToObj(this::convert);
+        System.out.println(fizzBuzzes.collect(Collectors.joining(", ")));
     }
 }

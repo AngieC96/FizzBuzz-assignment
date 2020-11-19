@@ -34,6 +34,7 @@ public class Convert {
 //    @CsvSource({"1, 1", "2, 2", "40, 40"})
     @CsvSource({"1, 1", "2, 2", "41, 41"})
     // We can provide the pair (expected, number) that will be used by  Junit to run this test multiple times
+    // We write "1,1" instead of (1,"1") since it's a csv file so you can only have test/strings inside it! JUnit will convert the string into the number
     // This test counts as three tests!!!!
     void numbers_not_divisible_by_3_or_5_to_strings(int number, String expected) {
         //FizzBuzz fizzBuzz = new FizzBuzz();  // Ctrl + Alt + f: Extract/Introduce → Introduce Field, Ctrl + Alt + O: Optimize Imports
