@@ -18,7 +18,7 @@ public class PrintOnStandardOutput {
 
         //System.out.print("text");
         FizzBuzz fizzBuzz = new FizzBuzz();
-        fizzBuzz.print();
+        fizzBuzz.generateAndPrintFizzBuzzes();
 
         //assertEquals("text", fakeStandardOutput.toString());
         assertEquals(FIZZBUZZES_1_TO_100, fakeStandardOutput.toString());

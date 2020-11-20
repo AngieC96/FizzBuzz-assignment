@@ -50,7 +50,8 @@ public class FizzBuzz {
 //        }
     }
 
-    public String convert(int number) {
+    //public String convert(int number) {  // vague!!!
+    public String numberToFizzBuzz(int number) {
         //return null;
         //return "1";
         if (number % 15 == 0) {
@@ -64,8 +65,9 @@ public class FizzBuzz {
         }
     }
 
-    public void print() {
-        Stream<String> fizzBuzzes = IntStream.range(1, 101).mapToObj(this::convert);
+    // public void print() {  // vague!!!
+    public void generateAndPrintFizzBuzzes() {
+        Stream<String> fizzBuzzes = IntStream.range(1, 101).mapToObj(this::numberToFizzBuzz);   // I can understand that I'm mappign number to FizzBuzzes!
         System.out.println(fizzBuzzes.collect(Collectors.joining(", ")));
     }
 }

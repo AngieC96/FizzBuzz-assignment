@@ -38,7 +38,7 @@ public class Convert {
     // This test counts as three tests!!!!
     void numbers_not_divisible_by_3_or_5_to_strings(int number, String expected) {
         //FizzBuzz fizzBuzz = new FizzBuzz();  // Ctrl + Alt + f: Extract/Introduce → Introduce Field, Ctrl + Alt + O: Optimize Imports
-        assertEquals(expected, fizzBuzz.convert(number));
+        assertEquals(expected, fizzBuzz.numberToFizzBuzz(number));
     }
 
 //    @Test
@@ -64,21 +64,21 @@ public class Convert {
     // Since we need to provide only one argument to our test
     void multiples_of_3_to_Fizz(int number) {
         //FizzBuzz fizzBuzz = new FizzBuzz();
-        assertEquals("Fizz", fizzBuzz.convert(number));
+        assertEquals("Fizz", fizzBuzz.numberToFizzBuzz(number));
     }
 
     @ParameterizedTest
     @ValueSource(ints = {5, 10, 100})
     void multiples_of_5_to_Buzz(int number) {
         //FizzBuzz fizzBuzz = new FizzBuzz();
-        assertEquals("Buzz", fizzBuzz.convert(number));
+        assertEquals("Buzz", fizzBuzz.numberToFizzBuzz(number));
     }
 
     @ParameterizedTest
     @ValueSource(ints = {15, 45, 75})
     void multiples_of_3_and_5_to_FizzBuzz(int number) {
         //FizzBuzz fizzBuzz = new FizzBuzz();
-        assertEquals("FizzBuzz", fizzBuzz.convert(number));
+        assertEquals("FizzBuzz", fizzBuzz.numberToFizzBuzz(number));
     }
 }
 

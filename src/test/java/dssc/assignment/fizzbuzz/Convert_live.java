@@ -23,7 +23,7 @@ public class Convert_live {
 
         // Assert → thing to check
         //Assertions.assertEquals("1", numberAsString);
-        Assertions.assertEquals("1", fizzBuzz.convert(1));
+        Assertions.assertEquals("1", fizzBuzz.numberToFizzBuzz(1));
     }
 
     @Test
@@ -47,7 +47,7 @@ public class Convert_live {
 
         for(int i = 1; i <= n; ++i){
             //System.out.println(a[i]);
-            assertEquals(a[i], fizzBuzz.convert(i));
+            assertEquals(a[i], fizzBuzz.numberToFizzBuzz(i));
         }
     }
 
