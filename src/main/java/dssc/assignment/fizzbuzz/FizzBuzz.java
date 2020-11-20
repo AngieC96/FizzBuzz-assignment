@@ -54,27 +54,19 @@ public class FizzBuzz {
     public String numberToFizzBuzz(int number) {
         //return null;
         //return "1";
-        if (isMultipleOfThreeAndFive(number)) {
+        if (isMultipleOf(number, 15)) {
             return "FizzBuzz";
-        } else if (isMultipleOfFive(number)) {
+        } else if (isMultipleOf(number, 5)) {
             return "Buzz";
-        } else if (isMultipleOfThree(number)) {
+        } else if (isMultipleOf(number, 3)) {
             return "Fizz";
         } else {
             return Integer.toString(number);
         }
     }
 
-    private boolean isMultipleOfThree(int number) {
-        return number % 3 == 0;
-    }
-
-    private boolean isMultipleOfFive(int number) {
-        return number % 5 == 0;
-    }
-
-    private boolean isMultipleOfThreeAndFive(int number) {
-        return number % 15 == 0;
+    private boolean isMultipleOf(int number, int divisor) {
+        return number % divisor == 0;
     }
 
     // public void print() {  // vague!!!
